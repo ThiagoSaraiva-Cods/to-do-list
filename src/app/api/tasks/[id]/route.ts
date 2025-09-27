@@ -3,9 +3,9 @@ import { tasks } from "../tasks-mock";
 
 export async function PATCH(
   request: NextRequest,
-  { params }: { params: { id: string } },
+  { params }: { params: Promise<{ id: string }> },
 ) {
-  const id = params.id;
+  const { id } = await params;
   const task = tasks.find((task) => task.id === id);
 
   if (!task) {
@@ -21,9 +21,9 @@ export async function PATCH(
 
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } },
+  { params }: { params: Promise<{ id: string }> },
 ) {
-  const id = params.id;
+  const { id } = await params;
 
   const taskId = id;
 
