@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ToDo List - Teste Técnico Next.js
 
-## Getting Started
+Este projeto é uma mini aplicação de ToDo List (Lista de Tarefas) desenvolvida como parte de um teste técnico para avaliar conhecimentos em Next.js, React e na construção de APIs.
 
-First, run the development server:
+A aplicação permite que os usuários criem, visualizem, atualizem (marcando como concluída) e deletem tarefas, com todas as interações gerenciadas por uma API backend construída com Next.js API Routes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🚀 Deploy
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+A aplicação está disponível para teste no seguinte link:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[**https://thiagosaraivacods-todolist.vercel.app**](https://thiagosaraivacods-todolist.vercel.app)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Funcionalidades
 
-## Learn More
+- [x] **Criar novas tarefas:** Um formulário permite a adição de novas tarefas.
+- [x] **Marcar/Desmarcar tarefas:** É possível alternar o status de uma tarefa entre pendente e concluída.
+- [x] **Excluir tarefas:** Cada tarefa pode ser removida da lista.
+- [x] **Validação de Formulário:** O campo de criação não permite o envio de tarefas vazias.
+- [x] **Backend Integrado:** Todas as operações (CRUD) são processadas por uma API RESTful.
+- [x] **Design Responsivo:** A interface se adapta a diferentes tamanhos de tela.
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Tecnologias Utilizadas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este projeto foi construído utilizando as seguintes tecnologias e bibliotecas:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Next.js:** Framework React para produção, utilizando o **App Router**.
+- **React:** Biblioteca para construção de interfaces de usuário.
+- **TypeScript:** Superset do JavaScript que adiciona tipagem estática.
+- **TailwindCSS:** Framework de CSS utility-first para estilização.
+- **React Hook Form & Zod:** Para gerenciamento de formulários de forma performática.
+- **API Routes (Next.js):** Para a construção do backend e dos endpoints da API.
+- **Mock de Dados em Memória:** Os dados são armazenados em uma variável no lado do servidor, conforme solicitado no teste.
 
-## Deploy on Vercel
+## 🏁 Rodando o Projeto Localmente
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Para executar este projeto em sua máquina local, siga os passos abaixo.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Pré-requisitos:**
+
+- **Node.js** (versão 18 ou superior)
+- **npm**, **yarn** ou **pnpm**
+
+**Passos:**
+
+1.  **Clone o repositório:**
+
+    ```bash
+    git clone [https://github.com/ThiagoSaraiva-Cods/to-do-list.git](https://github.com/ThiagoSaraiva-Cods/to-do-list.git)
+    ```
+
+2.  **Navegue até a pasta do projeto:**
+
+    ```bash
+    cd to-do-list
+    ```
+
+3.  **Instale as dependências:**
+
+    ```bash
+    npm install
+    ```
+
+4.  **Rode o servidor de desenvolvimento:**
+
+    ```bash
+    npm run dev
+    ```
+
+5.  **Abra o navegador:**
+    Acesse [http://localhost:3000](http://localhost:3000) para ver a aplicação em funcionamento.
+
+## 📝 Endpoints da API
+
+A API construída para este projeto segue os padrões RESTful e possui os seguintes endpoints:
+
+| Método   | Endpoint          | Descrição                                   |
+| :------- | :---------------- | :------------------------------------------ |
+| `GET`    | `/api/tasks`      | Retorna a lista completa de tarefas.        |
+| `POST`   | `/api/tasks`      | Cria uma nova tarefa.                       |
+| `PATCH`  | `/api/tasks/{id}` | Alterna o status `completed` de uma tarefa. |
+| `DELETE` | `/api/tasks/{id}` | Exclui uma tarefa específica.               |
