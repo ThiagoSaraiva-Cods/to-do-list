@@ -45,7 +45,7 @@ Para executar este projeto em sua máquina local, siga os passos abaixo.
 1.  **Clone o repositório:**
 
     ```bash
-    git clone [https://github.com/ThiagoSaraiva-Cods/to-do-list.git](https://github.com/ThiagoSaraiva-Cods/to-do-list.git)
+    git clone https://github.com/ThiagoSaraiva-Cods/to-do-list.git
     ```
 
 2.  **Navegue até a pasta do projeto:**
